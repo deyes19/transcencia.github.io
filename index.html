@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presentación Interactiva: Transciencia</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #0051a2;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #003d7a;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    nav button {
+      background: white;
+      color: #0051a2;
+      border: 1px solid #0051a2;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    nav button:hover {
+      background: #0051a2;
+      color: white;
+    }
+    section {
+      display: none;
+      padding: 40px;
+      animation: fadeIn 0.8s ease-in-out;
+      min-height: calc(100vh - 160px);
+      box-sizing: border-box;
+    }
+    section.active {
+      display: block;
+    }
+    h1, h2 {
+      color: #0051a2;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .icon {
+      font-size: 24px;
+      color: #0051a2;
+      margin-right: 10px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    footer {
+      background: #0051a2;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Presentación Interactiva: Transciencia</h1>
+  </header>
+
+  <nav>
+    <button onclick="navigateTo('definicion')"><i class="fas fa-question-circle icon"></i> ¿Qué es?</button>
+    <button onclick="navigateTo('origen')"><i class="fas fa-history icon"></i> Origen</button>
+    <button onclick="navigateTo('ejemplos')"><i class="fas fa-lightbulb icon"></i> Ejemplos</button>
+    <button onclick="navigateTo('importancia')"><i class="fas fa-balance-scale icon"></i> Importancia</button>
+    <button onclick="navigateTo('reflexion')"><i class="fas fa-brain icon"></i> Reflexión</button>
+  </nav>
+
+  <section id="definicion" class="active">
+    <h2><i class="fas fa-question-circle icon"></i> ¿Qué es la Transciencia?</h2>
+    <p>La <strong>transciencia</strong> se refiere a problemas que, aunque nacen en el ámbito científico, no pueden ser completamente resueltos mediante los métodos de la ciencia, debido a su complejidad o implicaciones éticas, sociales o filosóficas.</p>
+    <img src="https://www.telefonica.com/es/wp-content/uploads/sites/4/2024/01/pexels-photo-1108572-e1706691875827.jpeg" alt="Imagen representativa del pensamiento complejo">
+  </section>
+
+  <section id="origen">
+    <h2><i class="fas fa-history icon"></i> Origen del término</h2>
+    <p>El término fue acuñado por <strong>Alvin Weinberg</strong> en la década de 1970. Señaló que la ciencia tiene límites y que hay preguntas que, aunque parezcan científicas, requieren respuestas éticas o políticas.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Alvin_Weinberg.jpg" alt="Retrato de Alvin Weinberg">
+  </section>
+
+  <section id="ejemplos">
+    <h2><i class="fas fa-lightbulb icon"></i> Ejemplos de preguntas transcientíficas</h2>
+    <ul>
+      <li>¿Es aceptable el uso de energía nuclear?</li>
+      <li>¿Debemos modificar genéticamente a los seres humanos?</li>
+      <li>¿Qué impacto tiene la inteligencia artificial en la dignidad humana?</li>
+    </ul>
+    <img src="https://boxmov.com/wp-content/uploads/2023/07/AI-y-humano-2023-1080x675.webp" alt="Representación de la inteligencia artificial">
+  </section>
+
+  <section id="importancia">
+    <h2><i class="fas fa-balance-scale icon"></i> Importancia del concepto</h2>
+    <p>El concepto de transciencia nos permite comprender que algunas decisiones no pueden basarse solo en evidencia científica. Se requiere un enfoque interdisciplinario, que incluya la ética, la filosofía, la política y la participación social.</p>
+    <img src="https://imagenes.espaciologopedico.com/rev/3/3806.jpg" alt="Trabajo interdisciplinario para la toma de decisiones">
+  </section>
+
+  <section id="reflexion">
+    <h2><i class="fas fa-brain icon"></i> Reflexión final</h2>
+    <p>Reconocer la transciencia nos invita a integrar distintos saberes para abordar los desafíos complejos de nuestra sociedad. Es un llamado a la humildad científica y al diálogo entre disciplinas.</p>
+    <img src="https://d100mj7v0l85u5.cloudfront.net/s3fs-public/La-salud-del-futuro-demanda-atencion-interdisciplinaria-G.jpg" alt="Reflexión colectiva en grupo interdisciplinario">
+  </section>
+
+  <footer>
+    <p>Presentación sobre Transciencia - Elaborada con HTML</p>
+  </footer>
+
+  <script>
+    function navigateTo(id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
